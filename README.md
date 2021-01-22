@@ -1,6 +1,7 @@
 # barbatos
-Collection of Notes
----
+This is going to be a remake of the dragontool kit. Dragontoolkit has gotten convoluted. 
+
+
 # Quick Ref
 
 ## Quick python instance
