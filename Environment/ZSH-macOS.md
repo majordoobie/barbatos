@@ -51,8 +51,8 @@ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Co
 ---
 ## Metadata
 - `tags`: #cybernetic #env
-- `Title`: [[ZSH-macOS]]
-- `Created`: [[2021-01-22 09:42]]
+- `Title`: ZSH-macOS
+- `Created`: [[2021-01-22]] 09:42
 
 ==References==
 - [Kevin-Smets Repo](https://gist.github.com/kevin-smets/8568070)
