@@ -23,75 +23,53 @@ Commands are given with the `:` key
 
 
 ### Jumps
+#### Basic Jumps
+    `<ctrl> + d`       : Scroll down
+    `<ctrl> + u`       : Scroll up
+    `H M L`            : Highest, Middle, Lowest
+    `gg`               : Move to the top of the file
+    `G`                : Move to the bottom of the file
+#### Advance Jumps
+##### Scroll by braces
+    `{ || }`          : Jump to next blank line
+    `[{ || }]`        : Jumps between blocks
+    `( || )`          : Jumps between sentences in most cases it will jump between parent braces                       it is unreliable 
+    `[[ || ]]`        : Jumps between parent braces i.e. java classes within the same file
+    `%`               : Jump between the brace in the current scope
 
-    > Basic Jumps
+##### Scroll by Char
+    `f + char`        : Move to the char; Best used with brackets
+    `t + char`        : Move before the char
 
-    `<ctrl> + d` Scroll down
-    `<ctrl> + u` Scroll up
-    `H M L`           Highest, Middle, Lowest
-    `gg`                 Move to the top of the file
-    `G`                   Move to the bottom of the file
+##### Word Jumps
+    `w`               : Jump forward by a word
+    `b`               : Jump backwards by a word
+    `e`               : Jump to the end of a word
+##### Insert Jumps
+    `o`               : Insert below position with respect to syntax formatting
+    `O`               : Insert above position with respect to syntax formatting
+    `I`               : Insert at the beginning of the line regardless of position within the line
+    `A`               : Insert at the end of the line regardless of position; Best used for                           multi-line editing
+##### Marker Jumps
+    `m + char`        : Creates a jump marker at the cursor location using the char provided
+    `' + char`        : Jumps to the beginning of the line of the marker set at char
+    `btick + char`    : Jumps to the cursor position of the marker
+    `''`              : Jumps to the previous location before jump
 
-    ---
+### Deleting and Editing Text
+ #### Basic Delete and Change
+    `dw`              : Deletes a word
+    `cw`              : Changes the word (Delete + Insert)
+    `c2w`             : Change the next two words
+    `d2w`             : Delete the next two words
+#### Advance delete and change
+>    Small examples below but you can use them interchangeable be creative and think about what each char is doing with each other
 
-    > Advance Jumps
+    `%`               : Swap between brackets
+    `ci[`             : Change Inside Open and Close Bracket
+    `dt]`             : Delete all up to Close Bracket
 
-    **#Scroll by Braces**
-
-    `{ || }`            Jump to next blank line
-    `[{ || }]`        Jumps between blocks
-    `( || )`            Jumps between sentences in most cases it will jump between parent braces it is unreliable 
-    `[[ || ]]`        Jumps between parent braces i.e. java classes within the same file
-    `%`                      Jump between the brace in the current scope
-
-    **#Scroll by Char**
-
-    `f + char`       Move to the char; Best used with brackets
-    `t + char`       Move before the char
-
-    **#Word Jumps** 
-
-    `w`                    Jump forward by a word
-    `b`                    Jump backwards by a word
-    `e`                    Jump to the end of a word
-
-    **#Insert Jumps**
-
-    `o`                   Insert below position with respect to syntax formatting
-    `O`                   Insert above position with respect to syntax formatting
-    `I`                   Insert at the beginning of the line regardless of position within the line
-    `A`                   Insert at the end of the line regardless of position; Best used for multi-line editing
-
-    **#Creating and jumping between markers**
-
-    `m + char`     Creates a jump marker at the cursor location using the char provided
-
-    `' + char`     Jumps to the beginning of the line of the marker set at char
-    `btick + char` Jumps to the cursor position of the marker
-    `''`                 Jumps to the previous location before jump
-
-    ---
-
-- Deleting and Editing Text
-
-    > Basic Delete and Change
-
-    `dw`         Deletes a word
-    `cw`         Changes the word (Delete + Insert)
-    `c2w`       Change the next two words
-    `d2w`       Delete the next two words
-
-    > Advance Combo Editing
-
-    Small examples below but you can use them interchangeable be creative and think about what each char is doing with each other
-
-    `%`           Swap between brackets
-    `ci[`       Change Inside Open and Close Bracket
-    `dt]`       Delete all up to Close Bracket
-
-- Advance Selection
-
-    ```bash
+### Advance Search
     # Select between ()
     v + i + (
 
@@ -103,20 +81,19 @@ Commands are given with the `:` key
 
     # Selecting with F
     v + f + char
-    ```
 
-- Searches
-
-    `/`  - Search for text 
-
-    `n`  - Next find
-    `N` - Next find backwards
-
-    You can also use regex with your search query for example:
-
-    `/appl.`
-    `/.pple`
-    `/$apple`
+### Forward slash search with regex
+```
+/ 			: Search for text
+n			: Next find
+N			: Previous find
+```
+> You can also apply regex
+```
+/appl.
+/.pple
+/$apple
+```
 
 - Moving between windows
 
