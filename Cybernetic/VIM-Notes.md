@@ -15,7 +15,7 @@
 
 ### Basic Commands
 Commands are given with the `:` key
-![attachments/Pasted image 20210122115023.png|500]
+![](attachments/Pasted%20image%2020210122115023.png)
 
 ### Help menu
 - You can get to the help menu with `:help` you can also get help on topics with `:help <topic>` keep in mind that if you want help on a command such as `:w` you need to give that colon to it `:help :w`
