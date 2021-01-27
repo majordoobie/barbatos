@@ -200,4 +200,6 @@ N			: Previous find
 - `Created`: [[2021-01-22]] 11:46
 
 ==References==
-- []()
+- [Cambridge Notes](https://missing.csail.mit.edu/2020/editors/)
+- [Cheat Sheet](http://paulrougieux.github.io/vim.html)
+- [Advance Vim](https://advancedweb.hu/tips-on-window-management-in-vim/)
